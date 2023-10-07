@@ -72,12 +72,17 @@ def get_mmpose_filter(mmpose, i):
     image.save("./mmpose_frames/mmpose_frame_" + str(i).split('/')[-1][:-4] + ".jpeg")
     return "./mmpose_frames/mmpose_frame_" + str(i).split('/')[-1][:-4] + ".jpeg"
 
-def create_video(frames, fps, type):
+def create_video(frames, fps, video_type, output_directory="/content/ict3104-team17-2023/pose_input"):
+    # Create the output directory if it doesn't exist
+    os.makedirs(output_directory, exist_ok=True)
+
     print("building video result")
     clip = ImageSequenceClip(frames, fps=fps)
-    clip.write_videofile(type + "_result.mp4", fps=fps)
-
-    return type + "_result.mp4"
+    output_filename = f"{video_type}_result.mp4"
+    output_path = os.path.join(output_directory, output_filename)
+    clip.write_videofile(output_path, fps=fps)
+    
+    return output_path
 
 
 def infer_skeleton(mmpose, video_in):
