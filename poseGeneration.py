@@ -120,5 +120,5 @@ if __name__ == "__main__":
     parser.add_argument("input_video", help="Path to the input video file")
     args = parser.parse_args()
     
-    mmpose = gr.Interface.load(name="spaces/fffiloni/mmpose-estimation")
+    mmpose = gr.Interface.load(name="spaces/YueMafighting/mmpose-estimation")
     final_vid, files = infer_skeleton(mmpose, args.input_video)
