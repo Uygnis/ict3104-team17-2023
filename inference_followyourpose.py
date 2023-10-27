@@ -22,7 +22,7 @@ class merge_config_then_run():
         self.vae = None
         self.unet = None
         # self.download_model()
-        self.mmpose = gr.Interface.load(name="spaces/fffiloni/mmpose-estimation")
+        self.mmpose = gr.Interface.load(name="YueMafighting/mmpose-estimation")
     
     # def download_model(self):
     #     REPO_ID = 'YueMafighting/FollowYourPose_v1'
