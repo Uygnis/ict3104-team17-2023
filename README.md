@@ -1,4 +1,4 @@
-# Follow Your Pose Enhancement
+# Video inferencing and analysis work flow with Follow Your Pose
 
 This project extends the capabilities of the Follow Your Pose project by enabling users to upload their video files locally for both training and MMPose. Users can compare the outputs of the training to determine the best fit for their needs. The workflow consists of running MMPose code, followed by training and inferencing. Users can then analyze the results using Superimpose and calculate the Fréchet Inception Distance (FID) for quantitative analysis.
 
